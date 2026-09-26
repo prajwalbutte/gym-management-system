@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+        position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #111;
+}
+
+nav #logo {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+    transition: 0.3s;
+}
+
+#hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px;
+    padding-top: 120px;
+}
+
+
+#hero h1 {
+    font-size: 56px;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #00ffff;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: #fff;
+}
+
+#btn-container {
+    display: flex;
+    gap: 15px;
+}
+
+#about {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+.membership-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px 60px;
+}
+
+.membership-container>div {
+    background-color: #1a1a1a;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #333;
+    transition: 0.3s;
+    min-height: 350px;
+}
+
+.membership-container>div:hover {
+    transform: translateY(-5px);
+    border-color: #00ffff;
+}
+
+#membership {
+    padding: 80px 0;
+}
+
+#membership h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.membership-container h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.membership-container .price {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.membership-container ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.membership-container li {
+    margin-bottom: 12px;
+}
+
+.membership-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffff;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.membership-container a:hover {
+    background-color: #fff;
+    color: #111;
+    transition: 0.6s ease;
+}
+
+#contact {
+    padding: 80px 60px;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact input,
+#contact textarea {
+    padding: 12px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    font-size: 16px;
+}
+
+#contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact button {
+    padding: 12px;
+    background-color: #00ffff;
+    color: #111;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #fff;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background-color: #0a0a0a;
+    color: #aaa;
+}
+
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)), url("../Assets/gym_bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    #hero {
+        padding: 40px 20px;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+    }
+
+    .membership-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .membership-container>div {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    #contact {
+        padding: 60px 20px;
+    }
+}
